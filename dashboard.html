@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title> Dashboard</title>
+    <link rel="Website Icon" type="png" href="static/img/Swami_Vivekananda_University__Barrackpore_Logo-removebg-preview.png">
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/dashboardstyle.css">
+    <style>
+        .card-inner a {
+            text-decoration: none;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="menu-icon" onclick="openSidebar()">
+                <span class="material-icons-outlined">menu</span>
+            </div>
+            <div class="header-left">
+                <span class="material-icons-outlined">SVU</span>
+            </div>
+            <div class="header-right">
+                <!-- <span class="material-icons-outlined">notifications</span>
+                <span class="material-icons-outlined">email</span> -->
+                <span class="material-icons-outlined"><a href="prof.html">account_circle</a></span>
+                <span class="material-icons-outlined"><a href="#" style="text-decoration: none;">logout</a></span>
+
+            </div>
+        </header>
+        <!-- End Header -->
+
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                    <!-- <span class="material-icons-outlined">inventory</span>  -->
+                    <!-- <span>Swami Vivekananda University</span> -->
+                    <img src="static/img/Swami_Vivekananda_University__Barrackpore_Logo-removebg-preview.png" alt="logo">
+                </div>
+                <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+            </div>
+
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item">
+                    <a href="dashboard.html">
+                        <span class="material-icons-outlined">dashboard</span> Dashboard
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="form.html">
+                        <span class="material-icons-outlined">inventory_2</span> Registration
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#" target="_blank">
+                        <span class="material-icons-outlined">add_shopping_cart</span> For Dresses & Bags
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#" target="_blank">
+                        <span class="material-icons-outlined">add_shopping_cart</span> Library Card
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="examinationform.html" target="_blank">
+                        <span class="material-icons-outlined">add_shopping_cart</span> Examination Form
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="examform.html">
+                        <span class="material-icons-outlined">inventory_2</span> Report
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <!-- End Sidebar -->
+
+        <!-- Main -->
+        <main class="main-container">
+            <div class="main-title">
+                <p class="font-weight-bold">DASHBOARD</p>
+                <marquee style="color: red;">If you are a first time user please complete the registration process</marquee>
+            </div>
+
+            <div class="main-cards">
+
+                <div class="card">
+                    <div class="card-inner">
+                        <p class="text-primary"><a href="form.html">Registration</a></p>
+                        <span class="material-icons-outlined text-blue">inventory_2</span>
+                    </div>
+                    <span class="text-primary font-weight-bold">Status</span>
+                    <span class="text-primary font-weight-bold">Pending</span>
+                    <span class="text-primary font-weight-bold">completed</span>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <p class="text-primary"> For Dresses & Bags</p>
+                        <span class="material-icons-outlined text-orange">add_shopping_cart</span>
+                    </div>
+                    <span class="text-primary font-weight-bold">Status</span>
+                    <span class="text-primary font-weight-bold">Pending</span>
+                    <span class="text-primary font-weight-bold">completed</span>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <p class="text-primary"> Library Card</p>
+                        <span class="material-icons-outlined text-orange">add_shopping_cart</span>
+                    </div>
+                    <span class="text-primary font-weight-bold">Status</span>
+                    <span class="text-primary font-weight-bold">pending</span>
+                    <span class="text-primary font-weight-bold">completed</span>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <p class="text-primary"><a href="examinationform.html">Examination Form</a></p>
+                        <span class="material-icons-outlined text-orange">add_shopping_cart</span>
+                    </div>
+                    <span class="text-primary font-weight-bold">Status</span>
+                    <span class="text-primary font-weight-bold">pending</span>
+                    <span class="text-primary font-weight-bold">completed</span>
+                </div>
+
+            </div>
+
+            <!-- <div class="charts">
+
+                <div class="charts-card">
+                    <p class="chart-title">Top 5 Products</p>
+                    <div id="bar-chart"></div>
+                </div>
+
+                <div class="charts-card">
+                    <p class="chart-title">Purchase and Sales Orders</p>
+                    <div id="area-chart"></div>
+                </div>
+
+            </div> -->
+        </main>
+        <!-- End Main -->
+
+    </div>
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script src="static/dashboardscript.js"></script>
+</body>
+
+</html>

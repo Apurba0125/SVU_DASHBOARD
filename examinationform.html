@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> SVU Student Details</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+    <link rel="stylesheet" href="static/formstyle.css">
+    <link rel="Website Icon" type="png" href="static/img/Swami_Vivekananda_University__Barrackpore_Logo-removebg-preview.png">
+    <style>
+        select,
+        option {
+            padding: 8px 15px 8px 15px;
+            border: 1px solid #ccc;
+            border-radius: 0px;
+            margin-bottom: 25px;
+            margin-top: 2px;
+            width: 100%;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #2C3E50;
+            background-color: #ECEFF1;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-11 col-sm-10 col-md-10 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+                <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                    <!-- <h2 id="heading">Sign Up Your User Account</h2> -->
+                    <img id="heading" src="static/img/Swami_Vivekananda_University__Barrackpore_Logo-removebg-preview.png" alt="">
+                    <p>Fill all form field carefully and go to next step</p>
+                    <form id="msform">
+                        <!-- progressbar -->
+                        <ul id="progressbar">
+                            <li class="active" id="account"><strong>Personal Details</strong></li>
+                            <li id="personal"><strong>Course & Fees Details</strong></li>
+                            <li id="payment"><strong>Image</strong></li>
+                            <li id="confirm"><strong>Finish</strong></li>
+                        </ul>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div> <br>
+                        <!-- fieldsets -->
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Personal Information:</h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps">Step 1 - 4</h2>
+                                    </div>
+                                </div>
+                                <label class="fieldlabels">Full_Name:</label>
+                                <input type="text" name="name" placeholder="Full_Name" />
+                                <label class="fieldlabels">Email_id:</label>
+                                <input type="email" name="email" placeholder="Email_Id" />
+                                <label class="fieldlabels">Mobile_Number:</label>
+                                <input type="number" name="Mno" placeholder="Mobile_Number" />
+                            </div>
+                            <input type="button" name="next" class="next action-button" value="Next" />
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Course & Fees Information:</h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps">Step 2 - 4</h2>
+                                    </div>
+                                </div>
+                                <label class="fieldlabels">Course:</label>
+                                <select>
+                                    <option value="BBA">BBA</option>
+                                    <option value="MBA">MBA</option>
+                                    <option value="BCA">BCA</option>
+                                    <option value="MCA">MCA</option>
+                                    <option value="B.tech">B.tech</option>
+                                    <option value="M.TECH">M.TECH</option>
+                                    <option value="PHD">PHD</option>
+                                </select>
+                                <label class="fieldlabels">Semester:</label>
+
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                </select>
+                                <label class="fieldlabels"> Payment_Mode:</label>
+                                <select>
+                                    <option value="Cash">Cash</option>
+                                    <option value="Bank Transper">Bank_Transper</option>
+                                    <option value="Online">Online</option>
+                                </select>
+                                <label class="fieldlabels">Payment_Balence:</label>
+                                <input type="number" name="paybal" placeholder="amount" />
+                                <label class="fieldlabels">Admission year:</label>
+                                <input type="number" name="Addyear" placeholder="year" />
+                                <label class="fieldlabels">UTR/Transation_Number:</label>
+                                <input type="number" name="utnum" placeholder="number" />
+                            </div>
+                            <input type="button" name="next" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">File Upload:</h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps">Step 3 - 4</h2>
+                                    </div>
+                                </div>
+                                <p style="color: rgb(225, 151, 151);">All Photos Should Be Under 1 MB</p>
+                                <label class="fieldlabels">Upload Signature Photo:</label>
+                                <input type="file" name="pic1">
+                                <label class="fieldlabels">Upload payment Photo:</label>
+                                <input type="file" name="pic2">
+                            </div>
+                            <input type="button" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Finish:</h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps">Step 4 - 4</h2>
+                                    </div>
+                                </div> <br><br>
+                                <h2 class="purple-text text-center"><strong>Done</strong></h2> <br>
+                                <div class="row justify-content-center">
+                                    <div class="col-3"> <img src="static/img/img.png" class="fit-image"> </div>
+                                </div> <br><br>
+                                <div class="row justify-content-center">
+                                    <div class="col-7 text-center">
+                                        <h5 class="purple-text text-center"><a href="dashboard.html" class="copy-button">Successfully Submited The Details Now Back To
+                                                Dashboard </a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src="static/script.js"></script>
+
+</body>
+
+</html>
